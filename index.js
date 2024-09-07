@@ -35,7 +35,7 @@ let posts = [
 
 // Home route
 app.get("/",(req,res)=>{
-  res.end("<h1>Qoura</h1>")
+  res.end("<h1>Qoura api</h1>")
 })
 
 app.get("/posts", (req, res) => {
