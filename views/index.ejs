@@ -17,8 +17,8 @@
         <h3 class="user">@<%= post.username %></h3>
         <h4 class="content"><%= post.content  %></h4>
         <br>
-        <a href="http://localhost:6060/posts/<%=post.id%>">See in Details</a>
-        <a href="http://localhost:6060/posts/<%=post.id%>/edit">Edit</a>
+        <a href="https://quoraapi-encn.onrender.com//posts/<%=post.id%>">See in Details</a>
+        <a href="https://quoraapi-encn.onrender.com//posts/<%=post.id%>/edit">Edit</a>
 
         <form method="post" action="/posts/<%=post.id %>?_method=DELETE">
         <button>Delete Post</button>
