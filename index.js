@@ -18,21 +18,25 @@ let posts = [
     id: uuidv4(),
     username: "dhruv kumar",
     content: "others are happy because of you",
+    Posted_on:"2023-12-03",
   },
   {
     id: uuidv4(),
     username: "sujal godavariya",
     content: "hardest choice in life is to find the right person",
+    Posted_on:"2023-12-03",
   },
   {
     id: uuidv4(),
     username: "mohan kumar",
     content: "vibe is more importent then your life",
+    Posted_on:"2023-12-03",
   },
   {
     id:uuidv4(),
     username:"mantra lathiya",
     content:"living for other is rule of nature",
+    Posted_on:"2023-12-03",
   }
 ];
 
@@ -64,9 +68,9 @@ app.get("/posts/new", (req, res) => {
 
 //create new posts
 app.post("/posts", (req, res) => {
-  let { username, content } = req.body;
+  let { username, content ,post_date} = req.body;
   let id = uuidv4();
-  posts.push({ id, username, content });
+  posts.push({ id, username, content, post_date });
   res.redirect("/posts");
 });
 

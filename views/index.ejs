@@ -8,25 +8,24 @@
 </head>
 <body>
     <h1>Quora posts</h1>
+    <% for(post of posts){ %>
+        <div class="post">
+            <h3 class="user">@<%= post.username %></h3>
+            <h4 class="content"><%= post.content  %></h4>
+            <p class="date">Posted on:<%= post.post_date %></p>
+            <br>
+            <a href="https://quoraapi-encn.onrender.com/posts/<%=post.id%>">See in Details</a>
+            <a href="https://quoraapi-encn.onrender.com/posts/<%=post.id%>/edit">Edit</a>
+
+            <form method="post" action="/posts/<%=post.id %>?_method=DELETE">
+            <button>Delete Post</button>
+            </form>
+        </div>
+
+    <% }%>
+
+    <br/>
+    <br/>
+    <a href="https://quoraapi-encn.onrender.com/posts/new"> Create New Posts</a>
 </body>
 </html>
-
-
-<% for(post of posts){ %>
-    <div class="post">
-        <h3 class="user">@<%= post.username %></h3>
-        <h4 class="content"><%= post.content  %></h4>
-        <br>
-        <a href="https://quoraapi-encn.onrender.com/posts/<%=post.id%>">See in Details</a>
-        <a href="https://quoraapi-encn.onrender.com/posts/<%=post.id%>/edit">Edit</a>
-
-        <form method="post" action="/posts/<%=post.id %>?_method=DELETE">
-        <button>Delete Post</button>
-        </form>
-    </div>
-
-<% }%>
-
-<br/>
-<br/>
-<a href="https://quoraapi-encn.onrender.com/posts/new"> Create New Posts</a>
