@@ -29,6 +29,11 @@ let posts = [
     username: "mohan kumar",
     content: "vibe is more importent then your life",
   },
+  {
+    id:uuidv4(),
+    username:"mantra lathiya",
+    content:"living for other is rule of nature",
+  }
 ];
 
 //get all  posts
