@@ -37,7 +37,13 @@ let posts = [
     username:"mantra lathiya",
     content:"living for other is rule of nature",
     Posted_on:"2023-12-03",
-  }
+  },
+  {
+    id:uuidv4(),
+    username:"bina",
+    content:"life is not about finding the right person but about finding the right moment",
+    Posted_on:"2023-12-03",
+  },
 ];
 
 //get all  posts
