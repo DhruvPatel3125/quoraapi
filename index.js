@@ -46,13 +46,12 @@ let posts = [
   },
 ];
 
-//get all  posts
-
 // Home route
 app.get("/",(req,res)=>{
   res.end("<h1>Qoura api</h1>")
-})
+});
 
+//get all posts
 app.get("/posts", (req, res) => {
   try {
     res.render("index.ejs", { posts });
@@ -74,7 +73,7 @@ app.get("/posts/new", (req, res) => {
 
 //create new posts
 app.post("/posts", (req, res) => {
-  let { username, content ,post_date} = req.body;
+  let { username, content, post_date } = req.body;
   let id = uuidv4();
   posts.push({ id, username, content, post_date });
   res.redirect("/posts");
